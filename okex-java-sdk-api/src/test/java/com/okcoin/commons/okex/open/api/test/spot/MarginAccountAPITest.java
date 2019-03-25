@@ -46,8 +46,8 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
     @Test
     public void getLedger() {
         final List<UserMarginBillDto> result = this.marginAccountAPIService.getLedger(
-                "eth-usdt", "1",
-                "1", null, "1");
+                "btc-usdt", "1",
+                null, null, "100");
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
 

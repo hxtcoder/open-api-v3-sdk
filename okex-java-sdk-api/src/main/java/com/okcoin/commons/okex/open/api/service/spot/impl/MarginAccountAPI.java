@@ -40,7 +40,7 @@ public interface MarginAccountAPI {
      */
     @GET("/api/margin/v3/accounts/{instrument_id}/ledger")
     Call<List<UserMarginBillDto>> getLedger(@Path("instrument_id") final String product,
-                                            @Query("type") final String type,
+                                            @Query("typr") final String type,
                                             @Query("from") final String from,
                                             @Query("to") final String to,
                                             @Query("limit") String limit);
