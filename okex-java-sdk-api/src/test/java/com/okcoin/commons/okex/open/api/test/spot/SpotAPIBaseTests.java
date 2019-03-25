@@ -11,10 +11,10 @@ public class SpotAPIBaseTests extends BaseTests {
 
         config.setEndpoint("https://www.okex.com/");
         // apiKey，api注册成功后页面上有
-        config.setApiKey("");
+        config.setApiKey("525a6f73-65ec-4a97-a6cc-9d0b6397c33d");
         // secretKey，api注册成功后页面上有
-        config.setSecretKey("");
-        config.setPassphrase("");
+        config.setSecretKey("F5DA837748597670C0C3CDD4F599F7DA");
+        config.setPassphrase("helloxxd123");
         config.setPrint(true);
         config.setI18n(I18nEnum.SIMPLIFIED_CHINESE);
 

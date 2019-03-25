@@ -34,9 +34,10 @@ public class AccountAPITests extends  AccountAPIBaseTests{
     public void transfer() {
         Transfer transfer = new Transfer();
         transfer.setFrom(1);
-        transfer.setTo(6);
-        transfer.setCurrency("eos");
-        transfer.setAmount(BigDecimal.valueOf(0.0001));
+        transfer.setTo(5);
+        transfer.setCurrency("usdt");
+        transfer.setAmount(BigDecimal.valueOf(10));
+        transfer.setInstrument_id("btc-usdt");
         JSONObject result = this.accountAPIService.transfer(transfer);
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
@@ -62,7 +63,7 @@ public class AccountAPITests extends  AccountAPIBaseTests{
 
     @Test
     public void getLedger() {
-        List<Ledger> result = this.accountAPIService.getLedger(2, "btc",null, null, 10);
+        List<Ledger> result = this.accountAPIService.getLedger(33, "btc",null, null, 10);
         this.toResultString(AccountAPITests.LOG, "result", result);
     }
 

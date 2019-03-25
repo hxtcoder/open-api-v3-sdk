@@ -46,7 +46,7 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
     @Test
     public void getLedger() {
         final List<UserMarginBillDto> result = this.marginAccountAPIService.getLedger(
-                "eth-usdt", "2",
+                "eth-usdt", "1",
                 "1", null, "1");
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
@@ -84,7 +84,7 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
      */
     @Test
     public void getBorrowedAccountsByProductId() {
-        final List<MarginBorrowOrderDto> result = this.marginAccountAPIService.getBorrowedAccountsByProductId("lTC_usdt", null, null, "2", "0");
+        final List<MarginBorrowOrderDto> result = this.marginAccountAPIService.getBorrowedAccountsByProductId("btc_usdt", null, null, "2", "0");
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }
     /**
@@ -95,7 +95,7 @@ public class MarginAccountAPITest extends SpotAPIBaseTests {
         final BorrowRequestDto dto = new BorrowRequestDto();
         dto.setAmount("10");
         dto.setCurrency("usdt");
-        dto.setInstrument_id("ltc_usdt");
+        dto.setInstrument_id("ltc-usdt");
         final BorrowResult result = this.marginAccountAPIService.borrow_1(dto);
         this.toResultString(MarginAccountAPITest.LOG, "result", result);
     }

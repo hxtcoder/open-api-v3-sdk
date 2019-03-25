@@ -14,7 +14,7 @@ public class Transfer {
 
     private String sub_account;
 
-    private Integer instrument_id;
+    private String instrument_id;
 
     public String getCurrency() {
         return currency;
@@ -57,11 +57,11 @@ public class Transfer {
         this.to = to;
     }
 
-    public Integer getInstrument_id() {
+    public String getInstrument_id() {
         return instrument_id;
     }
 
-    public void setInstrument_id(Integer instrument_id) {
+    public void setInstrument_id(String instrument_id) {
         this.instrument_id = instrument_id;
     }
 }
